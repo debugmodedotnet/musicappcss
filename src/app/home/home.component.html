@@ -1,9 +1,62 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<h1>{{title}}</h1>
-<img src="assets/responsive.gif" alt="Ignite UI CLI">
+<!-- <h1>{{title}}</h1> -->
 
-<div id="linksContainer">
-    <h3 class="links"><a target="_blank" rel="noopener" href="https://github.com/IgniteUI/ignite-ui-cli">Ignite UI CLI </a></h3>
-    <h3 class="links"><a target="_blank" rel="noopener" href="https://www.infragistics.com/products/ignite-ui-angular">Component Demos</a></h3>
-    <h3 class="links"><a target="_blank" rel="noopener" href="https://github.com/IgniteUI/igniteui-angular-ui-kits">Sketch UI Kit</a></h3>
+
+<div class="container">
+
+    <div class="Item">
+        <igx-carousel #carousel [loop]="loop" [pause]="pause" (onSlideChanged)="onSlideChanged(carousel)">
+            <igx-slide *ngFor="let slide of slides;">
+                <img [src]="slide.image">
+                <button class='btnslider'>Buy Tickets</button>
+            </igx-slide>
+        </igx-carousel>
+    </div>
+
+
+
+
+    <div class="item">
+
+            <div>                    
+                
+                <igx-list>
+                        <igx-list-item isHeader="true">MOVIE COMPLEX NEAR YOU</igx-list-item>
+                        <igx-list-item #item *ngFor="let contact of contacts">
+                            <div class="item-container">
+                                <div class="contact">
+                                    <igx-avatar [src]="contact.photo" roundShape="true"></igx-avatar>
+                                    <div class="contact__info">
+                                        <span class="name">{{ contact.name }}</span>
+                                        <span class="phone">{{ contact.phone }}</span>
+                                    </div>
+                                </div>
+                                <!-- <igx-icon name="star" [color]="contact.isFavorite ? 'orange' : 'lightgray'" (click)="toggleFavorite(contact)"></igx-icon> -->
+                            </div>
+                        </igx-list-item>
+                        <button class="btnchangelocation">CHANGE LOCATION</button>
+                    </igx-list>
+                </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <div class="Item">
+            <igx-tabs>
+                    <igx-tabs-group label="TOP PICKS">
+                        hey
+                    </igx-tabs-group>
+                    <igx-tabs-group label="TOP RATED">TOP RATED</igx-tabs-group>
+                    <igx-tabs-group label="COMING SOON">COMINGSOON</igx-tabs-group>
+                  </igx-tabs>
+    </div>
+
 </div>

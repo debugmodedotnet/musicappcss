@@ -13,6 +13,52 @@ $app-palette: igx-palette($primary, $secondary);
 //$navbar-theme: igx-navbar-theme($background: #731963)
 //@include igx-navbar($navbar-theme)
 
-.content p {
-  margin: 15px;
+// .content p {
+//   margin: 15px;
+// }
+
+body{
+  background-color: black;
+}
+
+.igx-carousel__indicators {
+  display: none;
+}
+
+.contact {
+  display: flex;
+  flex: 1 0 240px;
+  align-items: center;
+
+  &__info {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-left: 24px;
+  }
+}
+
+.name {
+  font-weight: 600;
+}
+
+.phone {
+  font-size: 0.875em;
+  line-height: 1;
+}
+
+.igx-carousel__arrow--prev{
+  top:25%;
+  background-color: inherit;
+  color:white;
+}
+
+.igx-carousel__arrow--next{
+  top:25%;
+  color: white;
+  background-color: inherit;
+}
+
+.igx-list{
+ // background-color: red;
+
 }
