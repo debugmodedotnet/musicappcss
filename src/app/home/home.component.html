@@ -1,62 +1,49 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <!-- <h1>{{title}}</h1> -->
 
-
-<div class="container">
-
-    <div class="Item">
-        <igx-carousel #carousel [loop]="loop" [pause]="pause" (onSlideChanged)="onSlideChanged(carousel)">
-            <igx-slide *ngFor="let slide of slides;">
-                <img [src]="slide.image">
-                <button class='btnslider'>Buy Tickets</button>
-            </igx-slide>
-        </igx-carousel>
+<div>
+    <div class="row">
+        <h3>Movie Premieres</h3>
     </div>
-
-
-
-
-    <div class="item">
-
-            <div>                    
-                
-                <igx-list>
-                        <igx-list-item isHeader="true">MOVIE COMPLEX NEAR YOU</igx-list-item>
-                        <igx-list-item #item *ngFor="let contact of contacts">
-                            <div class="item-container">
-                                <div class="contact">
-                                    <igx-avatar [src]="contact.photo" roundShape="true"></igx-avatar>
-                                    <div class="contact__info">
-                                        <span class="name">{{ contact.name }}</span>
-                                        <span class="phone">{{ contact.phone }}</span>
-                                    </div>
+<div class="row">
+    
+  
+    <div class="col-md-8">
+        <div class="row">
+            <igx-carousel #carousel [loop]="loop" [pause]="pause" (onSlideChanged)="onSlideChanged(carousel)">
+                <igx-slide *ngFor="let slide of slides;">
+                    <img [src]="slide.image">
+                    <button class='btnslider'>Buy Tickets</button>
+                </igx-slide>
+            </igx-carousel>
+        </div>
+        <div class="row">
+what
+        </div>
+    </div>
+    <div class="col-md-4">
+     <div class="row">
+            <igx-list>
+                    <igx-list-item isHeader="true">MOVIE COMPLEX NEAR YOU</igx-list-item>
+                    <igx-list-item #item *ngFor="let contact of contacts">
+                        <div class="item-container">
+                            <div class="contact">
+                                <!-- <igx-avatar [src]="contact.photo" roundShape="true"></igx-avatar> -->
+                                <button [style.background]='contact.color' class="round-button"></button>
+                                <div class="contact__info">
+                                    <span class="name">{{ contact.name }}</span>
+                                    <span class="phone">{{ contact.phone }}</span>
                                 </div>
-                                <!-- <igx-icon name="star" [color]="contact.isFavorite ? 'orange' : 'lightgray'" (click)="toggleFavorite(contact)"></igx-icon> -->
                             </div>
-                        </igx-list-item>
-                        <button class="btnchangelocation">CHANGE LOCATION</button>
-                    </igx-list>
-                </div>
-
-
-
-
-
-
-
-
-
-
+                            <!-- <igx-icon name="star" [color]="contact.isFavorite ? 'orange' : 'lightgray'" (click)="toggleFavorite(contact)"></igx-icon> -->
+                        </div>
+                    </igx-list-item>
+                    <button class="btnchangelocation">CHANGE LOCATION</button>
+                </igx-list>
+     </div>
+     <div class="row">
+what 
+     </div>
     </div>
-
-    <div class="Item">
-            <igx-tabs>
-                    <igx-tabs-group label="TOP PICKS">
-                        hey
-                    </igx-tabs-group>
-                    <igx-tabs-group label="TOP RATED">TOP RATED</igx-tabs-group>
-                    <igx-tabs-group label="COMING SOON">COMINGSOON</igx-tabs-group>
-                  </igx-tabs>
-    </div>
-
+</div>
 </div>
